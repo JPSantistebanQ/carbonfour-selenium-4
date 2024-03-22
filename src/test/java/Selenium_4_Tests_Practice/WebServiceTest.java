@@ -1,13 +1,9 @@
 package Selenium_4_Tests_Practice;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import java.io.IOException;
-
 import Selenium_4_Tests_Practice.Utilities.Environments.BaseDomain;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jdk.jfr.Description;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -18,15 +14,17 @@ import org.apache.http.util.EntityUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * This class performs integration tests for the WebService.
  * It performs authenticating, and making an HTTP POST request to the API,
  * and expects a 201 (Created) response status code.
  */
-public class WebServiceTest {
+class WebServiceTest {
     private HttpClient httpClient;
     private String tokenLogin;
 

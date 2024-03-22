@@ -1,9 +1,5 @@
 package Selenium_4_Tests;
 
-import static org.assertj.core.api.SoftAssertions.assertSoftly;
-
-import java.util.HashMap;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -12,7 +8,12 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v122.emulation.Emulation;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class TestDevToolsDeviceMode {
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.assertj.core.api.SoftAssertions.assertSoftly;
+
+class TestDevToolsDeviceMode {
 
     public EdgeDriver driver;
 
@@ -46,7 +47,7 @@ public class TestDevToolsDeviceMode {
         devTools.createSession();
 
         // Emulate Device Mode. This includes width, height, deviceScaleFactor, and mobile.
-        HashMap deviceMetrics = new HashMap() {{
+        Map deviceMetrics = new HashMap() {{
             put("width", 800);
             put("height", 600);
             put("mobile", true);

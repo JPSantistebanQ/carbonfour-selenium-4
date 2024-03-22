@@ -1,13 +1,12 @@
 package Selenium_4_Tests;
 
-import static org.assertj.core.api.SoftAssertions.assertSoftly;
-
 import Selenium_4_Tests.Pages.LoginPage;
-
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-public class TestLoginRelativeLocators {
+import static org.assertj.core.api.SoftAssertions.assertSoftly;
+
+class TestLoginRelativeLocators {
 
     private static final String CREDENTIALS_TEXT = "Username: admin Password: admin123";
     private static final String USERNAME_TEXT = "Username";
